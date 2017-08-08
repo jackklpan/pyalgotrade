@@ -17,6 +17,7 @@
 """
 .. moduleauthor:: Gabriel Martin Becedillas Ruiz <gabriel.becedillas@gmail.com>
 """
+from functools import cmp_to_key
 
 from pyalgotrade import feed
 from pyalgotrade import dataseries
