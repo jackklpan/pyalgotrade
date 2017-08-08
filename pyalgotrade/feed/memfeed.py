@@ -37,8 +37,8 @@ class MemFeed(feed.BaseFeed):
     def start(self):
         super(MemFeed, self).start()
         # Now that all the data is in place, sort it to dispatch it in order.
-        cmpFun = lambda x, y: cmp(x[0], y[0])
-        self.__values.sort(cmp_to_key(cmpFun))
+        cmpFun = lambda x, y: (x[0]>y[0])-(x[0]<y[0])
+        self.__values.sort(key=cmp_to_key(cmpFun))
 
     def stop(self):
         pass
